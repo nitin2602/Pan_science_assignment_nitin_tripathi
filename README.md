@@ -1,152 +1,47 @@
-# ✅ Task Management System — PanScience Innovations
+# 📋SETMYTASK - PanScience
 
-[![Deployment](https://img.shields.io/badge/Deployed-Render-green)](https://task-management-panscience-innovations-wcv6.onrender.com/)
-[![Tech: MERN](https://img.shields.io/badge/Tech-MERN-blueviolet)](https://github.com/AnuragRawat92/Task-Management-PanScience-Innovations)
-
-A secure, role-based Task Management System built using the **MERN stack**, designed to streamline task assignment, tracking, and performance review for Admins and Users. Features include user and task CRUD operations, feedback workflows, performance charts, document attachments, and Docker-based deployment.
-
-### 🔗 Live Demo  
-[🌐 Live App](https://task-management-panscience-innovations-wcv6.onrender.com/)  
-[📂 GitHub Repo](https://github.com/AnuragRawat92/Task-Management-PanScience-Innovations/tree/main)  
-[📫 Postman Workspace](https://web.postman.co/workspace/4c12e23d-bb68-401b-8c94-d56e3addfc0c)
+An easy-to-use web app for managing tasks.  
+Admins can assign jobs, and users can complete and submit their work with files.  
+It helps both sides stay organized and on track.
 
 ---
 
-## ✨ Features
+## ✨ What You Can Do
 
-### 🔐 Authentication & Authorization
-- JWT-based login/registration
-- Role-based routing (Admin/User)
-- Password hashing with bcrypt
+### 🔑 Sign In
+- Safe login for both admins and team members
+- Separate views for each role
 
-### 👑 Admin Dashboard
-- Assign & manage tasks
-- Review, accept or reject submissions
-- User management & performance insights
-- View task analytics (charts, history)
+### 🧑‍💼 For Admins
+- Add new tasks
+- Give them to specific users
+- See who finished what
+- Give feedback and check progress
 
-### 🙋 User Dashboard
-- View and manage personal tasks
-- Start, submit, and rework on tasks
-- Track status and admin feedback
-- Edit own profile and password
+### 👩‍💻 For Users
+- See your assigned tasks
+- Upload your work (PDFs allowed)
+- Know the status and get feedback
 
-### 📊 Analytics
-- Visual task and performance analytics using Chart.js
-
-### 📁 Attachments
-- Upload up to 3 PDF documents per task
-- View/download attachments from task details
+### 📊 Track Progress
+- Simple charts show task updates
+- Users and admins both see reports
 
 ---
 
-## 🧰 Tech Stack
+## 🧪 Test & Demo
 
-| Layer             | Tech                                             |
-|------------------|--------------------------------------------------|
-| **Frontend**     | React, React Router, Bootstrap, Chart.js         |
-| **Backend**      | Node.js, Express.js                              |
-| **Database**     | MongoDB (Mongoose ORM)                           |
-| **Auth**         | JWT, bcrypt                                      |
-| **State Mgmt**   | React Context API                                |
-| **File Upload**  | Multer (local storage)                           |
-| **Visualization**| Chart.js, MDB React                              |
-| **Testing**      | Postman collection                               |
-| **DevOps**       | Docker, Docker Compose, Render for deployment    |
+You can explore the app using demo credentials shared during the task review.  
+Postman collection available for backend testing.
 
 ---
 
-## 🔁 Task Workflow
+## 🙋 About Me
 
-1. **Admin assigns a task** to a user
-2. **User sees the task**, marks it as In Progress
-3. **User submits task** → Admin reviews and either **approves or rejects**
-4. **Rejected tasks** can be **reworked** and resubmitted by the user
+- 👨‍💻Nitin Tripathi
+- 📧 nitinbusiness2602@gmail.com  
+- 🎓 Student at IET Lucknow
 
 ---
 
-## 🐳 Docker Setup
-
-Ensure [Docker](https://docs.docker.com/get-docker/) is installed.
-
-### 🧪 Run Locally with Docker
-
-
-git clone https://github.com/AnuragRawat92/Task-Management-PanScience-Innovations.git
-cd Task-Management-PanScience-Innovations
-docker-compose up --build
-Frontend → http://localhost:5173
-Backend → http://localhost:5000
-
-📂 Folder Structure
-bash
-Copy
-Edit
-Task-Management-PanScience-Innovations/
-├── client/                # React frontend
-├── server/                # Node.js/Express backend
-├── docker-compose.yml     # Docker config
-└── README.md
-📬 API & Docs
-Postman Collection: Postman Workspace
-
-Full CRUD for Users and Tasks
-
-File upload routes for PDF attachments
-
-Secure role-based APIs
-
-✅ Requirements Covered
- JWT Authentication
-
- User/Task CRUD
-
- Admin/Role-based access
-
- Attachments & File handling
-
- Performance dashboard
-
- Docker containerization
-
- Postman-tested API
-
- Responsive Bootstrap UI
-
- MongoDB (Dockerized)
-
- Live deployment on Render
-
-🧪 Testing
-All routes tested via Postman
-
-Basic manual integration testing
-
-API documentation included
-
-Automated tests using Jest/Mocha can be added for future enhancement.
-
-🧠 Design Decisions
-Used React Context for state management to keep the setup lightweight
-
-Chart.js for easy and effective visual analytics
-
-Multer with local storage for quick file upload prototyping
-
-Kept the architecture modular for ease of extension
-
-📌 Future Improvements
-Add WebSocket for real-time task updates
-
-Add automated tests (Jest or Cypress)
-
-Migrate file storage to AWS S3
-
-Add email notifications for task status updates
-
-Implement audit logs for admin actions
-
-👤 Contact
-Nitin Tripathi
-📧 nitinbusiness2602@gmail.com
-🏫 CSE-R , IET Lucknow
+Thanks for checking it out!
