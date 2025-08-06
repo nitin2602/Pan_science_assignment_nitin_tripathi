@@ -1,5 +1,5 @@
 // Get the backend URL from environment variables with a fallback
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL = "https://pan-science-assignment-nitin-tripathi-3.onrender.com";
 
 
 export const API_ENDPOINTS = {
