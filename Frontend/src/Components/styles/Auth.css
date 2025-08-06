@@ -1,0 +1,131 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full page layout */
+.auth-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6366f1, #3b82f6, #fcd5ce);
+  background-size: 300% 300%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Centered card */
+.auth-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+/* Icon styling */
+.auth-card i {
+  font-size: 2rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+/* Headings */
+.auth-card h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.auth-card h2 {
+  font-size: 1.5rem;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+/* Paragraph */
+.auth-card p {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.auth-buttons a {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #2563eb;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.auth-buttons a:hover {
+  background-color: #1d4ed8;
+}
+
+/* Footer */
+.auth-footer {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.auth-footer span {
+  font-weight: 600;
+  color: #ef4444;
+}
+
+/* Optional gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.custom-light-input .form-control {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid #ccc !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-light-input .form-control:hover,
+.custom-light-input .form-control:focus {
+  background-color: white !important;
+  color: black !important;
+  border-color: #007bff !important; /* Optional: add blue border on focus */
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25) !important; /* Optional: light blue glow */
+}
+
+.custom-light-input label {
+  color: black !important;
+}
+
+.custom-light-input .form-control::placeholder {
+  color: #6c757d !important;
+}
+

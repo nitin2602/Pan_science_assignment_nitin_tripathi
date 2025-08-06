@@ -1,0 +1,299 @@
+/* Navbar container */
+/* Modern Professional Navbar */
+:root {
+  --primary: rgba(26, 57, 232, 0.9);       /* Vibrant blue */
+  --primary-dark: rgba(21, 83, 241, 0.9);  /* Deep blue */
+  --accent: #4895ef;        /* Light blue */
+  --danger: #f72585;        /* Pink */
+  --light: #f8f9fa;
+  --dark: #1a1a2e;          /* Dark navy */
+  --text-light: #e2e8f0;
+  --text-lighter: #f8fafc;
+}
+
+.navbar-custom {
+  width: 100%;
+  height: auto;
+  padding: 0.75rem 2rem !important;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%) !important;
+  box-shadow: 0 4px 20px rgba(67, 97, 238, 0.15);
+  position: relative;
+  z-index: 1000;
+}
+
+/* Brand/Logo */
+.navbar-custom .navbar-brand {
+  font-size: 1.5rem;
+  padding: 0;
+  color: var(--text-lighter) !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: var(--accent) !important;
+  transform: translateY(-1px);
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  display: none;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1000;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.hamburger-icon:hover {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation container */
+.navbar-custom .navbar-collapse {
+  flex-grow: 0;
+  margin-left: auto;
+}
+
+/* Main navigation */
+.main-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem;
+  margin-right: 1rem !important;
+}
+
+/* Combined navigation wrapper */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 1.5rem;
+}
+
+/* Navigation links */
+.navbar-custom .nav-link-custom {
+  color: rgba(226, 232, 240, 0.9) !important;
+  padding: 0.75rem 1.25rem !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-custom .nav-link-custom:hover,
+.navbar-custom .nav-link-custom.active {
+  color: var(--text-lighter) !important;
+  background: rgba(72, 149, 239, 0.2);
+  transform: translateY(-1px);
+}
+
+.navbar-custom .nav-link-custom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: var(--accent);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.navbar-custom .nav-link-custom:hover::after,
+.navbar-custom .nav-link-custom.active::after {
+  width: 70%;
+}
+
+/* Right navigation section */
+.right-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem;
+}
+
+/* Logout button */
+.logout-btn {
+  padding: 0.75rem 1.75rem !important;
+  background: linear-gradient(45deg, var(--danger), #f8457a) !important;
+  border: none !important;
+  font-size: 0.875rem !important;
+  border-radius: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  box-shadow: 0 4px 8px rgba(247, 37, 133, 0.2) !important;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(45deg, #e5177b, var(--danger)) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(247, 37, 133, 0.3) !important;
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 991.98px) {
+  .hamburger-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-custom .navbar-collapse {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    padding: 5rem 1.5rem 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    transition: right 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow-y: auto;
+  }
+
+  .navbar-custom .navbar-collapse.show {
+    display: block;
+    right: 0;
+  }
+
+  .nav-wrapper {
+    display: grid;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .main-nav {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .nav-link-custom {
+    padding: 1rem 1.5rem !important;
+    border-radius: 10px;
+    margin: 0;
+    font-size: 1rem !important;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-link-custom:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .right-nav {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .logout-btn {
+    width: 100%;
+    justify-content: center !important;
+    padding: 1rem !important;
+  }
+}
+
+/* Menu Overlay */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 998;
+}
+
+.menu-overlay.show {
+  display: block;
+}
+
+/* Active link indicator */
+.nav-link-custom.active {
+  font-weight: 600;
+}
+
+/* Icons in navigation */
+.navbar-custom .nav-link-custom i,
+.navbar-custom .navbar-brand i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar-custom .nav-link-custom:hover i {
+  transform: translateX(3px);
+}
+
+/* Animation for mobile menu */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.navbar-custom .navbar-collapse.show .nav-link-custom {
+  animation: slideIn 0.3s ease forwards;
+}
+
+.navbar-custom .navbar-collapse.show .nav-link-custom:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.navbar-custom .navbar-collapse.show .nav-link-custom:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.navbar-custom .navbar-collapse.show .nav-link-custom:nth-child(3) {
+  animation-delay: 0.3s;
+}
+/* Add more as needed */
+
+/* Small screens */
+@media (max-width: 575.98px) {
+  .navbar-custom {
+    padding: 0.75rem 1.5rem !important;
+  }
+
+  .navbar-custom .navbar-brand {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,302 @@
+/* Modern Professional Admin Profile */
+:root {
+  --primary: #4361ee;       /* Vibrant blue */
+  --primary-light: #e6ecfe;
+  --secondary: #3a0ca3;     /* Deep blue */
+  --accent: #4895ef;        /* Light blue */
+  --success: #4cc9f0;       /* Teal */
+  --warning: #f8961e;       /* Orange */
+  --danger: #f72585;        /* Pink */
+  --dark: #1a1a2e;          /* Dark navy */
+  --light: #f8f9fa;
+  --text-dark: #2b2d42;
+  --text-medium: #4a4e69;
+  --text-light: #8d99ae;
+}
+
+.admin-profile-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  min-height: calc(100vh - 100px);
+}
+
+.profile-sidebar {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.profile-main {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: block;
+  object-fit: cover;
+  border: 4px solid var(--white);
+  box-shadow: 0 8px 24px rgba(67, 97, 238, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.profile-role {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.profile-email {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.form-section {
+  margin-top: 2rem;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.form-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+.form-outline {
+  position: relative;
+  background: var(--white);
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 1.5rem;
+}
+
+.form-outline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(67, 97, 238, 0.1);
+}
+
+.form-outline input {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-dark);
+  background-color: var(--white) !important;
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-outline input:hover {
+  border-color: var(--accent);
+  background-color: var(--light) !important;
+}
+
+.form-outline input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+  outline: none;
+  background-color: var(--white) !important;
+}
+
+.password-requirements {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: var(--light);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  border: 1px solid var(--light-gray);
+}
+
+.password-requirements ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.75rem 0 0;
+}
+
+.password-requirements li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.password-requirements li::before {
+  content: "•";
+  color: var(--primary);
+  font-weight: bold;
+  margin-right: 0.75rem;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.85rem;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 12px rgba(67, 97, 238, 0.2);
+}
+
+.submit-button:hover {
+  background: linear-gradient(45deg, var(--secondary), var(--primary));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(67, 97, 238, 0.3);
+}
+
+.alert {
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: none;
+}
+
+.alert-success {
+  background-color: rgba(76, 201, 240, 0.1);
+  color: var(--success);
+  border-left: 4px solid var(--success);
+}
+
+.alert-danger {
+  background-color: rgba(247, 37, 133, 0.1);
+  color: var(--danger);
+  border-left: 4px solid var(--danger);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .profile-sidebar,
+  .profile-main {
+    background: var(--dark);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .profile-name {
+    color: #f8fafc;
+  }
+
+  .profile-role {
+    color: #a0aec0;
+  }
+
+  .profile-email {
+    color: #cbd5e0;
+  }
+
+  .form-title {
+    color: #e2e8f0;
+  }
+
+  .form-outline {
+    background: var(--dark);
+  }
+
+  .form-outline input {
+    color: #e2e8f0;
+    background-color: var(--dark) !important;
+    border-color: #4a5568;
+  }
+
+  .form-outline input:hover {
+    border-color: var(--accent);
+    background-color: #2a374a !important;
+  }
+
+  .form-outline input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(72, 149, 239, 0.2);
+    background-color: var(--dark) !important;
+  }
+
+  .password-requirements {
+    background: #2a374a;
+    color: #cbd5e0;
+    border-color: #4a5568;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-profile-container {
+    padding: 1.5rem;
+  }
+
+  .profile-sidebar,
+  .profile-main {
+    padding: 1.75rem;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+}

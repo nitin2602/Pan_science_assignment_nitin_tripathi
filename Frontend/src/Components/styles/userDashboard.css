@@ -1,0 +1,118 @@
+/* General Styling */
+.dashboard-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff9fb; /* Very light pink background */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
+    text-align: center;
+    border: 1px solid #fce4ec; /* Subtle pink border */
+}
+
+.dashboard-title {
+    font-size: 26px;
+    color: #db2777; /* Primary pink color */
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* Task Cards */
+.task-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+.task-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(236, 72, 153, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #f472b6; /* Pink accent border */
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(236, 72, 153, 0.12);
+    background: #fdf2f8; /* Light pink hover background */
+}
+
+.task-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #be185d; /* Darker pink for titles */
+    margin-bottom: 8px;
+}
+
+.task-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.task-deadline, .task-details, .task-status {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #888;
+}
+
+.task-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: #fce7f3; /* Light pink status background */
+    color: #db2777;
+    font-weight: 500;
+}
+
+/* Enhanced Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-15px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.slide-in {
+    animation: slideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.95); opacity: 0; }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.bounce-in {
+    animation: bounceIn 0.5s ease-out;
+}
+
+@keyframes gentlePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.pulse-on-hover:hover {
+    animation: gentlePulse 1.5s infinite;
+}
+
+/* Professional Color Palette */
+:root {
+    --primary-pink: #db2777;
+    --light-pink: #fdf2f8;
+    --accent-pink: #f472b6;
+    --dark-pink: #be185d;
+    --subtle-shadow: rgba(236, 72, 153, 0.1);
+}
