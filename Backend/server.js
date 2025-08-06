@@ -12,7 +12,7 @@ const httpServer = createServer(app);
 console.log("CORS allowed origin:", FRONTEND);
 // CORS configuration
 const allowedOrigins = [
-"https://task-management-panscience-innovations-wcv6.onrender.com",
+"https://pan-science-assignment-nitin-tripathi-3.onrender.com",
   "http://localhost:5173"
 ];
 
