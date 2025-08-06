@@ -133,7 +133,7 @@ const Navbar = () => {
                         onClick={handleLinkClick}
                       >
                         <MDBIcon fas icon="tasks" className="me-2" />
-                        Tasks
+                        My Tasks
                       </MDBNavbarLink>
                     </MDBNavbarItem>
                   </>
@@ -190,7 +190,7 @@ const Navbar = () => {
                     onClick={handleLinkClick}
                   >
                     <MDBIcon fas icon="user-circle" className="me-2" />
-                 Your Profile
+                 Profile View
                   </MDBNavbarLink>
                 </MDBNavbarItem>
 
