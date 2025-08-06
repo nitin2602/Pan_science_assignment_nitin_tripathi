@@ -8,4 +8,4 @@ export const MONGO_URI = process.env.MONGO_URI;
 
 export const JWT_SECRET = process.env.JWT_SECRET;
 
-export const FRONTEND = process.env.FRONTEND_URL || "http://localhost:5173";
+export const FRONTEND = "https://pan-science-assignment-nitin-tripat.vercel.app";
